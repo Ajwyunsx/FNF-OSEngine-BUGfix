@@ -1999,7 +1999,7 @@ class ChartingState extends MusicBeatState
 			//AWW YOU MADE IT SEXY <3333 THX SHADMAR
 
 			if(!blockInput){
-				if(FlxG.keys.justPressed.RIGHT #if android || _virtualpad.buttonRight.justPressed #end){
+				if(FlxG.keys.justPressed.RIGHT #if android || virtualPad.buttonRight.justPressed #end){
 					curQuant++;
 					if(curQuant>quantizations.length-1)
 						curQuant = 0;
@@ -2007,7 +2007,7 @@ class ChartingState extends MusicBeatState
 					quantization = quantizations[curQuant];
 				}
 
-				if(FlxG.keys.justPressed.LEFT #if android || _virtualpad.buttonLeft.justPressed #end){
+				if(FlxG.keys.justPressed.LEFT #if android || virtualPad.buttonLeft.justPressed #end){
 					curQuant--;
 					if(curQuant<0)
 						curQuant = quantizations.length-1;
@@ -2043,7 +2043,7 @@ class ChartingState extends MusicBeatState
 					var beat:Float = curDecBeat;
 					var snap:Float = quantization / 4;
 					var increase:Float = 1 / snap;
-					if (FlxG.keys.pressed.UP #if android || virtualpad.buttonUp.pressed #end)
+					if (FlxG.keys.pressed.UP #if android || virtualPad.buttonUp.pressed #end)
 					{
 						var fuck:Float = CoolUtil.quantize(beat, snap) - increase;
 						feces = Conductor.beatToSeconds(fuck);
@@ -2088,9 +2088,9 @@ class ChartingState extends MusicBeatState
 			if (FlxG.keys.pressed.SHIFT #if android || virtualPad.buttonY.justPressed #end)
 				shiftThing = 4;
 
-			if (FlxG.keys.justPressed.D #if android || virtualpad.buttonRight.justPressed #end)
+			if (FlxG.keys.justPressed.D #if android || virtualPad.buttonRight.justPressed #end)
 				changeSection(curSec + shiftThing);
-			if (FlxG.keys.justPressed.A #if android || virtualpad.buttonLeft.justPressed #end) {
+			if (FlxG.keys.justPressed.A #if android || virtualPad.buttonLeft.justPressed #end) {
 				if(curSec <= 0) {
 					changeSection(_song.notes.length-1);
 				} else {
