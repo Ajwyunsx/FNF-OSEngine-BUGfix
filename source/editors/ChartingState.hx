@@ -1914,7 +1914,6 @@ class ChartingState extends MusicBeatState
 					resetSection();
 			}
 			
-            if android
 			if (FlxG.mouse.wheel != 0 && !FlxG.keys.pressed.C)
 			{
 				FlxG.sound.music.pause();
@@ -1940,7 +1939,7 @@ class ChartingState extends MusicBeatState
 					vocals.time = FlxG.sound.music.time;
 				}
 			}
-			#end
+		
 
 			//ARROW VORTEX SHIT NO DEADASS
 
